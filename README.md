@@ -11,6 +11,9 @@ different package managers (e.g. npm, yarn).
 Documentation is rather scarse, and hard to follow.
 e.g. npm-scripts https://github.com/npm/npm/blob/87629880a71baec352c1b5345bc29268d6212467/doc/misc/npm-scripts.md
 
+If package managers want to piggy back on npm's `package.json` then they should follow it ad-literam,
+or build consensus over a `package.json` standard i.e. make it npm-abstract.
+
 I am primarily interested in how the package managers treat git dependencies;
 see the [raison d'être](https://github.com/andreineculau/npm-publish-git#raison-dêtre)
 of https://github.com/andreineculau/npm-publish-git .
@@ -133,6 +136,9 @@ the fact that
    **NOTE** coupling the two was regarded as progress ?! I guess á la `svn commit`.
 1. `yarn` doesn't know (yet?) `prepack` and `postpack`
 1. `yarn pack` doesn't call **any** scripts - no `prepublish`, no `prepare`, no nothing
+
+**NOTE** further discrepancies were found when comparing the environment variables of a
+yarn command and an npm command, but this was not my goal so far. See [diff_npm_vars.txt](diff_npm_vars.txt).
 
 
 ## License
