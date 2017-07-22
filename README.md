@@ -141,6 +141,13 @@ the fact that
 yarn command and an npm command, but this was not my goal so far. See [diff_npm_vars.txt](diff_npm_vars.txt).
 
 
+## Refs
+
+* https://github.com/yarnpkg/yarn/issues/3992
+* https://github.com/yarnpkg/yarn/issues/3209
+* https://github.com/yarnpkg/rfcs/pull/70
+* https://github.com/npm/npm/issues/17893
+
 ## License
 
 [UNLICENSE](UNLICENSE)
