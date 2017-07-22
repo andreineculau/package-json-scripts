@@ -7,11 +7,12 @@ function exe() {
     "$@"
 }
 
-VSN_NPM=$(npm -v)
+PM=$(echo ${npm_config_user_agent} | sed 's| .*||' | sed 's|/.*||')
+VSN_PM=$(echo ${npm_config_user_agent} | sed 's| .*||' | sed 's|[^/]+||')
 PKG_NAME="$(node -e "var pkg = require('./package.json'); console.log(pkg.name);")"
 TIMESTAMP=$(date +%s%N)
 
-PACKAGE_JSON_SCRIPTS_DIR="${PACKAGE_JSON_SCRIPTS_DIR:-/tmp/package-json-scripts/${VSN_NPM}}"
+PACKAGE_JSON_SCRIPTS_DIR="${PACKAGE_JSON_SCRIPTS_DIR:-/tmp/package-json-scripts/${PM}-${VSN_PM}}"
 
 DIR="${PACKAGE_JSON_SCRIPTS_DIR}/${PKG_NAME}"
 FILE="${TIMESTAMP}.$1.${npm_lifecycle_event:-}"

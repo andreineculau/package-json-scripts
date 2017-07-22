@@ -12,11 +12,12 @@ COMMIT=$(git rev-parse --verify HEAD 2>/dev/null)
 git clean -xdf
 git reset --hard ${COMMIT}
 
-VSN_NPM=$(npm -v)
+PM=$(basename $1)
+VSN_PM=$(${PM} --version)
 PKG_NAME="$(node -e "var pkg = require('./package.json'); console.log(pkg.name);")"
 TIMESTAMP=$(date +%s%N)
 
-PACKAGE_JSON_SCRIPTS_DIR="/tmp/package-json-scripts/${VSN_NPM}"
+PACKAGE_JSON_SCRIPTS_DIR="/tmp/package-json-scripts/${PM}-${VSN_PM}"
 
 CMD=$(echo "$@" | sed 's/[^a-zA-Z0-9]/_/g')
 DIR="${PACKAGE_JSON_SCRIPTS_DIR}/${TIMESTAMP}.${CMD}.${PKG_NAME}"
