@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+function exe() {
+    echo "$(pwd)\$"
+    echo "$@"
+    "$@"
+}
+
+VSN_NPM=$(npm -v)
+PKG_NAME="$(node -e "var pkg = require('./package.json'); console.log(pkg.name);")"
+TIMESTAMP=$(date +%s%N)
+
+PACKAGE_JSON_SCRIPTS_DIR="${PACKAGE_JSON_SCRIPTS_DIR:-/tmp/package-json-scripts/${VSN_NPM}}"
+
+DIR="${PACKAGE_JSON_SCRIPTS_DIR}/${PKG_NAME}"
+FILE="${TIMESTAMP}.$1.${npm_lifecycle_event:-}"
+
+mkdir -p "${DIR}"
+exe touch "${DIR}/${FILE}"
+
+export PACKAGE_JSON_SCRIPTS_DIR
