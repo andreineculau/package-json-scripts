@@ -80,6 +80,8 @@ e.g. `/tmp/package-json-scripts/yarn-0.27.5/1500753629289806000.yarn_install.pac
 https://docs.google.com/spreadsheets/d/1XH8iDyOmNf-ZH3A2SMV5YTDcT2YPXmhFcaUPsIyYEu8/edit?usp=sharing .
 Anyone should be able to add comments.**
 
+For atomicity, a PDF (might not out of date with the link above) is checked in as [results.pdf](results.pdf).
+
 
 ### Observation: `{pre,,post}uninstall` don't run
 
