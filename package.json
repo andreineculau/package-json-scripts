@@ -35,5 +35,8 @@
     "publish": "./log publish",
     "postpublish": "./log postpublish"
   },
-  "license": "Unlicense"
+  "license": "Unlicense",
+  "files": [
+    "log"
+  ]
 }
