@@ -8,11 +8,6 @@ function exe() {
 }
 
 COMMIT=$(git rev-parse --verify HEAD 2>/dev/null)
-function on_exit() {
-    git reset --hard ${COMMIT}
-}
-
-trap on_exit EXIT
 
 git clean -xdf
 git reset --hard ${COMMIT}
