@@ -1,6 +1,6 @@
 {
   "name": "package-json-scripts",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "scripts": {
     "prepublish": "./log prepublish",
     "prepare": "./log prepare",
