@@ -1,7 +1,7 @@
 # package-json-scripts
 
 A NodeJS package to test how `package.json` scripts are being scheduled by
-different package managers (e.g. npm, yarn).
+different package managers (e.g. npm, yarn, pnpm).
 
 [See results!](#results)
 
@@ -79,7 +79,7 @@ e.g. `/tmp/package-json-scripts/yarn-0.27.5/1500753629289806000.yarn_install.pac
 
 ## Results
 
-**I have recorded my results for npm@3 npm@4 npm@5 and yarn@0.27 in
+**I have recorded my results for npm@3 npm@4 npm@5, yarn@0.27 and pnpm@1.7.1 in
 https://docs.google.com/spreadsheets/d/1XH8iDyOmNf-ZH3A2SMV5YTDcT2YPXmhFcaUPsIyYEu8/edit?usp=sharing .
 Anyone should be able to add comments.**
 
@@ -147,6 +147,8 @@ yarn command and an npm command, but this was not my goal so far. See [diff_npm_
 * https://github.com/yarnpkg/yarn/issues/3209
 * https://github.com/yarnpkg/rfcs/pull/70
 * https://github.com/npm/npm/issues/17893
+* https://github.com/pnpm/pnpm/issues/854
+* https://github.com/pnpm/pnpm/issues/855
 
 ## License
 
