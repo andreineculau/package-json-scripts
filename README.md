@@ -86,11 +86,10 @@ Anyone should be able to add comments.**
 For atomicity, a PDF (might not out of date with the link above) is checked in as [results.pdf](results.pdf).
 
 
-### Observation: `{pre,,post}uninstall` don't run
+### Observation: general unpredictability
 
-Although mentioned in the docs, the uninstall scripts don't run on `npm uninstall <registry dep>`.
-
-`npm uninstall <git dep>` gets even weirder because it will trigger the `{pre,,post}install+prepare+prepack+postpack`.
+Your package will be installed, uninstalled, packed, published, etc
+in different ways based on the package manager that you, or your user is using.
 
 
 ### Observation: `npm install <git dep>` is unpredictable
