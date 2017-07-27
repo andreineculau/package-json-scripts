@@ -25,3 +25,6 @@ exe rm -rf "${DIR}"
 mkdir -p "${DIR}"
 PACKAGE_JSON_SCRIPTS_DIR="${DIR}" exe "$@"
 exe tree "${DIR}"
+
+git add -f .
+git commit -m "${CMD}"
